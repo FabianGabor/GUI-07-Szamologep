@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI-06-Forms2", "GUI-06-Forms2.csproj", "{A755D45B-9425-4220-B656-69D3C50ED34F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI-07-Szamologep", "GUI-07-Szamologep.csproj", "{A755D45B-9425-4220-B656-69D3C50ED34F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

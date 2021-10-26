@@ -33,14 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.solution = new System.Windows.Forms.Label();
             this.Muveletek = new System.Windows.Forms.GroupBox();
-            this.rbOszt = new System.Windows.Forms.RadioButton();
-            this.rbSzoroz = new System.Windows.Forms.RadioButton();
-            this.rbKivon = new System.Windows.Forms.RadioButton();
-            this.rbOsszead = new System.Windows.Forms.RadioButton();
+            this.labelOsztasEredmeny = new System.Windows.Forms.Label();
+            this.labelSzorzasEredmeny = new System.Windows.Forms.Label();
+            this.labelKivonasEredmeny = new System.Windows.Forms.Label();
+            this.labelOsszeadasEredmeny = new System.Windows.Forms.Label();
+            this.labelOsztas = new System.Windows.Forms.Label();
+            this.labelSzorzas = new System.Windows.Forms.Label();
+            this.labelKivonas = new System.Windows.Forms.Label();
+            this.labelOsszeadas = new System.Windows.Forms.Label();
             this.Muveletek.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,15 +79,6 @@
             this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(296, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "+";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
             this.label4.Location = new System.Drawing.Point(429, 127);
@@ -103,10 +97,14 @@
             // 
             // Muveletek
             // 
-            this.Muveletek.Controls.Add(this.rbOszt);
-            this.Muveletek.Controls.Add(this.rbSzoroz);
-            this.Muveletek.Controls.Add(this.rbKivon);
-            this.Muveletek.Controls.Add(this.rbOsszead);
+            this.Muveletek.Controls.Add(this.labelOsztasEredmeny);
+            this.Muveletek.Controls.Add(this.labelSzorzasEredmeny);
+            this.Muveletek.Controls.Add(this.labelKivonasEredmeny);
+            this.Muveletek.Controls.Add(this.labelOsszeadasEredmeny);
+            this.Muveletek.Controls.Add(this.labelOsztas);
+            this.Muveletek.Controls.Add(this.labelSzorzas);
+            this.Muveletek.Controls.Add(this.labelKivonas);
+            this.Muveletek.Controls.Add(this.labelOsszeadas);
             this.Muveletek.Location = new System.Drawing.Point(233, 198);
             this.Muveletek.Name = "Muveletek";
             this.Muveletek.Size = new System.Drawing.Size(165, 140);
@@ -114,47 +112,69 @@
             this.Muveletek.TabStop = false;
             this.Muveletek.Text = "Muveletek";
             // 
-            // rbOszt
+            // labelOsztasEredmeny
             // 
-            this.rbOszt.Location = new System.Drawing.Point(6, 109);
-            this.rbOszt.Name = "rbOszt";
-            this.rbOszt.Size = new System.Drawing.Size(104, 24);
-            this.rbOszt.TabIndex = 3;
-            this.rbOszt.Text = "oszt";
-            this.rbOszt.UseVisualStyleBackColor = true;
-            this.rbOszt.CheckedChanged += new System.EventHandler(this.rbOszt_CheckedChanged);
+            this.labelOsztasEredmeny.Location = new System.Drawing.Point(42, 116);
+            this.labelOsztasEredmeny.Name = "labelOsztasEredmeny";
+            this.labelOsztasEredmeny.Size = new System.Drawing.Size(117, 21);
+            this.labelOsztasEredmeny.TabIndex = 15;
+            this.labelOsztasEredmeny.Text = "/";
             // 
-            // rbSzoroz
+            // labelSzorzasEredmeny
             // 
-            this.rbSzoroz.Location = new System.Drawing.Point(6, 79);
-            this.rbSzoroz.Name = "rbSzoroz";
-            this.rbSzoroz.Size = new System.Drawing.Size(104, 24);
-            this.rbSzoroz.TabIndex = 2;
-            this.rbSzoroz.Text = "szoroz";
-            this.rbSzoroz.UseVisualStyleBackColor = true;
-            this.rbSzoroz.CheckedChanged += new System.EventHandler(this.rbSzoroz_CheckedChanged);
+            this.labelSzorzasEredmeny.Location = new System.Drawing.Point(42, 86);
+            this.labelSzorzasEredmeny.Name = "labelSzorzasEredmeny";
+            this.labelSzorzasEredmeny.Size = new System.Drawing.Size(117, 21);
+            this.labelSzorzasEredmeny.TabIndex = 14;
+            this.labelSzorzasEredmeny.Text = "*";
             // 
-            // rbKivon
+            // labelKivonasEredmeny
             // 
-            this.rbKivon.Location = new System.Drawing.Point(6, 49);
-            this.rbKivon.Name = "rbKivon";
-            this.rbKivon.Size = new System.Drawing.Size(104, 24);
-            this.rbKivon.TabIndex = 1;
-            this.rbKivon.Text = "kivon";
-            this.rbKivon.UseVisualStyleBackColor = true;
-            this.rbKivon.CheckedChanged += new System.EventHandler(this.rbKivon_CheckedChanged);
+            this.labelKivonasEredmeny.Location = new System.Drawing.Point(42, 55);
+            this.labelKivonasEredmeny.Name = "labelKivonasEredmeny";
+            this.labelKivonasEredmeny.Size = new System.Drawing.Size(117, 21);
+            this.labelKivonasEredmeny.TabIndex = 13;
+            this.labelKivonasEredmeny.Text = "-";
             // 
-            // rbOsszead
+            // labelOsszeadasEredmeny
             // 
-            this.rbOsszead.Checked = true;
-            this.rbOsszead.Location = new System.Drawing.Point(6, 19);
-            this.rbOsszead.Name = "rbOsszead";
-            this.rbOsszead.Size = new System.Drawing.Size(104, 24);
-            this.rbOsszead.TabIndex = 0;
-            this.rbOsszead.TabStop = true;
-            this.rbOsszead.Text = "osszead";
-            this.rbOsszead.UseVisualStyleBackColor = true;
-            this.rbOsszead.CheckedChanged += new System.EventHandler(this.rbOsszead_CheckedChanged);
+            this.labelOsszeadasEredmeny.Location = new System.Drawing.Point(42, 25);
+            this.labelOsszeadasEredmeny.Name = "labelOsszeadasEredmeny";
+            this.labelOsszeadasEredmeny.Size = new System.Drawing.Size(117, 21);
+            this.labelOsszeadasEredmeny.TabIndex = 12;
+            this.labelOsszeadasEredmeny.Text = "+";
+            // 
+            // labelOsztas
+            // 
+            this.labelOsztas.Location = new System.Drawing.Point(6, 116);
+            this.labelOsztas.Name = "labelOsztas";
+            this.labelOsztas.Size = new System.Drawing.Size(18, 21);
+            this.labelOsztas.TabIndex = 11;
+            this.labelOsztas.Text = "/";
+            // 
+            // labelSzorzas
+            // 
+            this.labelSzorzas.Location = new System.Drawing.Point(6, 86);
+            this.labelSzorzas.Name = "labelSzorzas";
+            this.labelSzorzas.Size = new System.Drawing.Size(18, 21);
+            this.labelSzorzas.TabIndex = 10;
+            this.labelSzorzas.Text = "*";
+            // 
+            // labelKivonas
+            // 
+            this.labelKivonas.Location = new System.Drawing.Point(6, 55);
+            this.labelKivonas.Name = "labelKivonas";
+            this.labelKivonas.Size = new System.Drawing.Size(18, 21);
+            this.labelKivonas.TabIndex = 9;
+            this.labelKivonas.Text = "-";
+            // 
+            // labelOsszeadas
+            // 
+            this.labelOsszeadas.Location = new System.Drawing.Point(6, 25);
+            this.labelOsszeadas.Name = "labelOsszeadas";
+            this.labelOsszeadas.Size = new System.Drawing.Size(18, 21);
+            this.labelOsszeadas.TabIndex = 8;
+            this.labelOsszeadas.Text = "+";
             // 
             // Form1
             // 
@@ -164,7 +184,6 @@
             this.Controls.Add(this.Muveletek);
             this.Controls.Add(this.solution);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
@@ -176,25 +195,20 @@
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.RadioButton rbSzoroz;
-
-        private System.Windows.Forms.RadioButton rbKivon;
-
-        private System.Windows.Forms.RadioButton rbOsszead;
-
-        private System.Windows.Forms.RadioButton rbOszt;
-
+        private System.Windows.Forms.Label labelOsztas;
+        private System.Windows.Forms.Label labelSzorzas;
+        private System.Windows.Forms.Label labelKivonas;
+        private System.Windows.Forms.Label labelOsszeadas;
+        private System.Windows.Forms.Label labelOsztasEredmeny;
+        private System.Windows.Forms.Label labelSzorzasEredmeny;
+        private System.Windows.Forms.Label labelKivonasEredmeny;
+        private System.Windows.Forms.Label labelOsszeadasEredmeny;
+        
         private System.Windows.Forms.GroupBox Muveletek;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
 
         private System.Windows.Forms.Label solution;
 
         private System.Windows.Forms.Label label4;
-
-        private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;

@@ -19,33 +19,24 @@ namespace GUI_06_Forms2
 
         private void calculate()
         {
-            int sol = 0;
-
             try
             {
-                if (rbOsszead.Checked) sol = int.Parse(textBox1.Text) + int.Parse(textBox2.Text);
-                else if (rbKivon.Checked) sol = int.Parse(textBox1.Text) - int.Parse(textBox2.Text);
-                else if (rbSzoroz.Checked) sol = int.Parse(textBox1.Text) * int.Parse(textBox2.Text);
-                else if (rbOszt.Checked)
-                    try
-                    {
-                        sol = int.Parse(textBox1.Text) / int.Parse(textBox2.Text);
-                    }
-                    catch (Exception oszt)
-                    {
-                    }
-            }
-            catch (Exception e)
-            {
-            }
-
-
-            try
-            {
-                solution.Text = sol.ToString();
+                labelOsszeadasEredmeny.Text = (int.Parse(textBox1.Text) + int.Parse(textBox2.Text)).ToString();
+                labelKivonasEredmeny.Text = (int.Parse(textBox1.Text) - int.Parse(textBox2.Text)).ToString();
+                labelSzorzasEredmeny.Text = (int.Parse(textBox1.Text) * int.Parse(textBox2.Text)).ToString();
+                
+                try
+                {
+                    labelOsztasEredmeny.Text = (int.Parse(textBox1.Text) / int.Parse(textBox2.Text)).ToString();
+                }
+                catch (Exception)
+                {
+                    labelOsztasEredmeny.Text = "Nem ertelmezheto";
+                }
             }
             catch (Exception)
             {
+                // TODO
             }
         }
 
@@ -58,26 +49,5 @@ namespace GUI_06_Forms2
         {
             calculate();
         }
-
-        private void rbKivon_CheckedChanged(object sender, EventArgs e)
-        {
-            calculate();
-        }
-
-        private void rbOsszead_CheckedChanged(object sender, EventArgs e)
-        {
-            calculate();
-        }
-
-        private void rbSzoroz_CheckedChanged(object sender, EventArgs e)
-        {
-            calculate();
-        }
-
-        private void rbOszt_CheckedChanged(object sender, EventArgs e)
-        {
-            calculate();
-        }
-
     }
 }
